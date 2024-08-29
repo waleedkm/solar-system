@@ -1,5 +1,8 @@
 name: Solar System Workflow
-
+env:
+  MONGO_URI: 'mongodb1.mongo.cosmos.azure.com'
+  MONGO_USERNAME: 'mongodb1'
+  MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
 on: 
   workflow_dispatch:
   push:
