@@ -1,6 +1,6 @@
 name: Solar System Workflow
 env:
-  MONGO_URI: "mongodb://mongodb1.mongo.cosmos.azure.com:10255/myapp1"
+  MONGO_URI: "mongodb://mongodb1.mongo.cosmos.azure.com:10255/myapp1?ssl=true&"
   MONGO_USERNAME: 'mongodb1'
   MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
 on: 
