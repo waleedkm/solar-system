@@ -32,7 +32,8 @@ jobs:
 #          continue-on-error: true instead of this we can use a iff condition on next step by adding a step id
           
         - name: Archive Test Result
-          if: steps.nodejs-unit-testing-step.outcome == 'failure' || steps.nodejs-unit-testing-step.outcome == 'success'
+          if: failure() && steps.nodejs-unit-testing-step.outcome == 'failure' || steps.nodejs-unit-testing-step.outcome == 'success'
+          # by default a succes() function is running so wwe will use failure () to override that status check 
           uses: actions/upload-artifact@v3
           with:
             name: Mocha-Test-Result
