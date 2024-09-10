@@ -1,5 +1,5 @@
 name: Solar System Workflow
-#added new uriee
+#added new uri
 env:
   MONGO_URI: ${{vars.MONGO_URI}}
   MONGO_USERNAME: 'waleed'
