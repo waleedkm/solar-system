@@ -1,7 +1,7 @@
 name: Solar System Workflow
 #added
 env:
-  MONGO_URI: ${{env.var.MONGO_URI}}
+  MONGO_URI: ${{vars.MONGO_URI}}
   MONGO_USERNAME: 'waleed'
   MONGO_PASSWORD: ${{secrets.MONGO_PASSWORD}}
 on: 
